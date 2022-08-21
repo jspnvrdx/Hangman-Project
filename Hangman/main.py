@@ -30,17 +30,17 @@ def select_difficulty(number_of_stages, maxLives, difficulty):
 
 def get_word():
     word = random.choice(words).upper()
-    while '-' in word or ' ' in word:
-        word = random.choice(words).upper()
     return word
 
 # -------------------------------------------------------------------------
 
 def hangman(maxLives, stages, word, difficulty, message, used_letters):
     os.system('cls||clear')
+    global justStarted
 
     if not timer.is_alive():
-        print('TOO BAD, YOU RAN OUT OF TIME')
+        print('TOO BAD, YOU RAN OUT OF TIME 🕛')
+        justStarted = False
         print(f'THE WORD WAS \'{word}\'')
         return
 
@@ -99,12 +99,14 @@ def hangman(maxLives, stages, word, difficulty, message, used_letters):
 
 # -------------------------------------------------------------------------
 def play_again():
-    
+    global attempt
+    if justStarted: return True
+
     response = input('Do you want to play again? [Y/N]: ').upper()
-    if response == 'Y':
+    if response == 'Y': 
+        justStarted = False
         return True
-    elif response == 'N':
-        return False
+    elif response == 'N': return False
     else:
         os.system('cls')
         print('Invalid choice. Please try again')
@@ -125,11 +127,8 @@ def intro(stages, maxLives, difficulty, message, word):
 
 def start_game():
     global stages, maxLives, difficulty, message, word, timer
-    stages, maxLives, difficulty, message, word = intro(stages, maxLives, difficulty, message, word)
-    timer.start()
-    hangman(maxLives, stages, word, difficulty, message, used_letters=list())
     while play_again():
-        timer = Timer(30,timer_print, args=('TIME\'S UP!',))
+        timer = Timer(2,timer_print, args=('\nTIME\'S UP! (Press \'ENTER\' to Continue)',))
         stages, maxLives, difficulty, message, word = intro(stages, maxLives, difficulty, message, word)
         timer.start()
         hangman(maxLives, stages, word, difficulty, message, used_letters=list())
@@ -137,5 +136,5 @@ def start_game():
 timer = Timer(30,timer_print, args=('TIME\'S UP!',))
 
 # Global Variables
-stages, maxLives, difficulty, message, word = [], 0, '', '', ''
+stages, maxLives, difficulty, message, word, justStarted = [], 0, '', '', '', True
 start_game()
