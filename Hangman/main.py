@@ -99,7 +99,7 @@ def hangman(maxLives, stages, word, difficulty, message, used_letters):
 
 # -------------------------------------------------------------------------
 def play_again():
-    global attempt
+    global justStarted
     if justStarted: return True
 
     response = input('Do you want to play again? [Y/N]: ').upper()
@@ -128,7 +128,7 @@ def intro(stages, maxLives, difficulty, message, word):
 def start_game():
     global stages, maxLives, difficulty, message, word, timer
     while play_again():
-        timer = Timer(2,timer_print, args=('\nTIME\'S UP! (Press \'ENTER\' to Continue)',))
+        timer = Timer(30,timer_print, args=('\nTIME\'S UP! (Press \'ENTER\' to Continue)',))
         stages, maxLives, difficulty, message, word = intro(stages, maxLives, difficulty, message, word)
         timer.start()
         hangman(maxLives, stages, word, difficulty, message, used_letters=list())
