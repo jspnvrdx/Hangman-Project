@@ -39,7 +39,6 @@ action
 activity
 actor
 actually
-ad hoc
 adamant
 adaptable
 add
@@ -211,11 +210,9 @@ birth
 birthday
 bit
 bite
-bite-sized
 bitter
 bizarre
 black
-black-and-white
 blade
 bleach
 bless
@@ -226,7 +223,6 @@ bloody
 blot
 blow
 blue
-blue-eyed
 blush
 blushing
 board
@@ -721,8 +717,6 @@ expert
 explain
 explode
 extend
-extra-large
-extra-small
 exuberant
 exultant
 eye
@@ -747,7 +741,6 @@ fancy
 fang
 fantastic
 far
-far-flung
 farm
 fascinated
 fast
@@ -962,7 +955,6 @@ happy
 harass
 harbor
 hard
-hard-to-find
 harm
 harmonious
 harmony
@@ -988,7 +980,6 @@ helpless
 hesitant
 hideous
 high
-high-pitched
 highfalutin
 hilarious
 hill
@@ -1047,8 +1038,6 @@ idiotic
 ignorant
 ignore
 ill
-ill-fated
-ill-informed
 illegal
 illustrious
 imaginary
@@ -1221,7 +1210,6 @@ lock
 locket
 lonely
 long
-long-term
 longing
 look
 loose
@@ -1301,7 +1289,6 @@ men
 mend
 merciful
 mere
-mess up
 messy
 metal
 mice
@@ -1436,7 +1423,6 @@ offer
 office
 oil
 old
-old-fashioned
 omniscient
 one
 onerous
@@ -1828,7 +1814,6 @@ search
 seashore
 seat
 second
-second-hand
 secret
 secretary
 secretive
@@ -2123,7 +2108,6 @@ tearful
 tease
 tedious
 teeny
-teeny-tiny
 teeth
 telephone
 telling
@@ -2369,10 +2353,6 @@ week
 weigh
 weight
 welcome
-well-groomed
-well-made
-well-off
-well-to-do
 wet
 wheel
 whimsical
@@ -2387,7 +2367,6 @@ whole
 wholesale
 wicked
 wide
-wide-eyed
 wiggly
 wild
 wilderness
@@ -2438,7 +2417,6 @@ writer
 writing
 wrong
 wry
-x-ray
 yak
 yam
 yard
